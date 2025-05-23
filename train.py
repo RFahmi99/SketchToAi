@@ -62,10 +62,10 @@ test_dataset = SketchToImageDataset(
 )
 
 # Create training DataLoader
-train_loader = DataLoader(train_dataset, batch_size=8, shuffle=True)
+train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
 
 # Create testing DataLoader
-test_loader = DataLoader(test_dataset, batch_size=8, shuffle=False)
+test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
 
 # Initialize the model
 model = UNet().to(device)
