@@ -14,7 +14,7 @@ from dataset.sketch_dataset import SketchToImageDataset
 torch.manual_seed(42)  # Set random seed for reproducibility
 
 # Device configuration
-device = torch_directml.device()
+device = torch.device('cuda') 
 
 # Transform sketch and original images to tensors for training
 train_transform = A.Compose([
